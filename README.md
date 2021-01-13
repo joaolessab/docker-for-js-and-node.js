@@ -21,3 +21,9 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/jvlessa/Docker-for-JavaScript---Node.JS/main/media/containerVSvirtualmachine.png" width="800">
 </p>
+
+## INSTALLING DOCKER
+- [Official page](https://docs.docker.com/get-docker/);
+- [Windows](https://docs.docker.com/docker-for-windows/install/);
+- [Linux](https://docs.docker.com/engine/install/);
+- [MAC](https://docs.docker.com/docker-for-mac/install/);
