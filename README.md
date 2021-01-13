@@ -19,5 +19,5 @@
 - Containers use <b>only what the application that is running</b> needs (they basically just have the libs and the application);
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jvlessa/Docker-for-JavaScript---Node.JS/main/media/containerVSvirtualmachine.png" width="450">
+  <img src="https://raw.githubusercontent.com/jvlessa/Docker-for-JavaScript---Node.JS/main/media/containerVSvirtualmachine.png" width="800">
 </p>
