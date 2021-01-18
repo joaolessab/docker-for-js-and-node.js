@@ -27,3 +27,26 @@
 - [Windows](https://docs.docker.com/docker-for-windows/install/);
 - [Linux](https://docs.docker.com/engine/install/);
 - [MAC](https://docs.docker.com/docker-for-mac/install/);
+
+## CHECKING IF EVERYTHING IS OKAY, AFTER INSTALLATION
+- Check version: ``docker -v``
+- Checking Hello World: ``docker run hello-world``
+- Checking Docker Images: ``docker images``
+- Containers pulled so far (history): ``docker ps -a``
+- If you want to see only the containers that are running (running state): ``docker ps``
+
+## DOCKER HUB
+- Basically it's the Docker Official Repository with ready-to-use images;
+- [Docker Hub: Official Website](https://hub.docker.com/);
+
+## IMAGE
+- It's the application that you want to use it;
+- Example: Ubuntu, Office 2010;
+
+## CONTAINER
+- It's an instance of the IMAGE;
+- It's a process of the IMAGE running;
+- We can have lots of CONTAINERS running one IMAGE;
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jvlessa/Docker-for-JavaScript---Node.JS/main/media/imagevscontainerdocker.png" width="800">
+</p>
