@@ -50,3 +50,30 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/jvlessa/Docker-for-JavaScript---Node.JS/main/media/imagevscontainerdocker.png" width="800">
 </p>
+
+## DOCKER COMMANDS
+- [Check it here](https://docs.docker.com/engine/reference/commandline/docker/);
+- docker container ls: List all running containers;
+
+## DOCKER RUN ACTION
+- Two signais: command to run (--);
+- Shortcut to run (-);
+- Port (port that the docker will use on the physical machine : port on the docker container);
+- Name of the docker image
+
+## RUNNING A CONTAINER (PRACTICING)
+- Docker Container Run NGINX direto do Docker Hub;
+- Pull do Docker Hub, trazendo camadas, etc... tudo: ``docker pull nginx``;
+- If you want a stable version version: ``docker pull nginx:stable``;
+- If you want a stable latest version: ``docker pull nginx:latest``;
+- List the Docker Images to see it downloaded: ``docker images``
+
+## DOCKER: NGINX
+- Servidor web (tipo Apache);
+``docker container run -p 8080:80 nginx``
+- Enter on the URL: http://localhost:8080/;
+- NGINX will be running;
+- If I want to keep this container running without terminal open, I can add the word "--detach" or "-d";
+``docker container run -p 8080:80 --detach nginx``
+``docker container run -p 8080:80 -d nginx``
+- It will give you back the containerId;
