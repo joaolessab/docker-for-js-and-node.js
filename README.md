@@ -69,6 +69,7 @@
 - docker container inspect containerId: brings JSON of the configuration of our docker;
 - docker container stats: estatísticas do docker;
 - docker container run -it ubuntu /bin/bash: i = interactive / t = terminal / terminal = /bin/bash
+- docker image rm imageName: removes image;
 
 ## DOCKER RUN ACTION
 - Two signais: command to run (--);
@@ -125,7 +126,7 @@ enter to get into ubuntu terminal prompt
 - Main commands (enter the directory folder to run it):
 ```
 docker-compose up: Run the file with container;
-docker-compose up -d: RUn the file with containers in dettach mode;
+docker-compose up -d: Run the file with containers in dettach mode;
 docker-compose stop: Stops the containers;
 ```
 
