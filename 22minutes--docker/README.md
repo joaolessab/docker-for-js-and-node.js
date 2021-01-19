@@ -31,7 +31,6 @@ On the root folder, execute each one:
 docker run -d -v $(pwd)/api/db/data:/var/lib/mysql --rm --name mysql-container mysql-image
 ```
 ```
-
 docker run -d -v $(pwd)/api:/home/node/app -p 9001:9001 --link mysql-container --rm --name node-container node-image
 ```
 ```
@@ -44,5 +43,5 @@ docker exec -i mysql-container mysql -uroot -pprogramadorabordo < api/db/script.
 ```
 
 ### ACCESSING URL'S:
-https://localhost:9001/products
-https://localhost:8888
+- https://localhost:9001/products
+- https://localhost:8888
