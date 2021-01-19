@@ -59,8 +59,16 @@
 - docker container ls: List all running containers;
 - docker container stop containerId: stops the execution of the docker;
 - docker container ls -a: list all container, running or not;
+- docker run (do not use this one): runs a process in a isolated container;
+- docker container run (use this one): runs a container;
+- docker container run -d (or --detach): keeps the container on the foreground, even with no terminal opened;
 - docker container run --publish 8080:80 --detach --name webserver nginx: name your container;
 - docker container rm containerId containerId name: remove container;
+- docker container containerId start: start container;
+- docker container top name containerId: list all process running inside the container;
+- docker container inspect containerId: brings JSON of the configuration of our docker;
+- docker container stats: estatísticas do docker;
+- docker container run -it ubuntu /bin/bash: i = interactive / t = terminal / terminal = /bin/bash
 
 ## DOCKER RUN ACTION
 - Two signais: command to run (--);
@@ -85,3 +93,22 @@
 ``docker container run -p 8080:80 -d nginx``
 - It will give you back the containerId;
 
+## DOCKER: UBUNTU WITH TERMINAL
+``
+docker pull ubuntu
+docker container run -it ubuntu /bin/bash
+git -v
+git --version
+apt-get update
+apt-get install git
+git -v
+git --version
+exit
+``
+
+- Me juntar ao container novamente:
+``
+docker container ls
+docker container attach containerId
+enter to get into ubuntu terminal prompt
+``
