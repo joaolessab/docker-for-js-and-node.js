@@ -52,8 +52,15 @@
 </p>
 
 ## DOCKER COMMANDS
+- <b>Docker Sintaxe:</b> docker <command> <sub command> (options);
 - [Check it here](https://docs.docker.com/engine/reference/commandline/docker/);
+- docker: list all commands;
+- docker version;
 - docker container ls: List all running containers;
+- docker container stop containerId: stops the execution of the docker;
+- docker container ls -a: list all container, running or not;
+- docker container run --publish 8080:80 --detach --name webserver nginx: name your container;
+- docker container rm containerId containerId name: remove container;
 
 ## DOCKER RUN ACTION
 - Two signais: command to run (--);
@@ -77,3 +84,4 @@
 ``docker container run -p 8080:80 --detach nginx``
 ``docker container run -p 8080:80 -d nginx``
 - It will give you back the containerId;
+
