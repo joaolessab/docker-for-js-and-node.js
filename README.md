@@ -130,5 +130,6 @@ docker-compose stop: Stops the containers;
 ```
 
 ## DOCKER FILE
+- [Official Reference](https://docs.docker.com/engine/reference/builder/);
 - When you want to create your own image;
 - When you want to update your image to Docker Hub;
