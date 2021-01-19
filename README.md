@@ -112,3 +112,23 @@ docker container ls
 docker container attach containerId
 enter to get into ubuntu terminal prompt
 ``
+
+## DOCKER COMPOSE
+- Way of organizing and manager all of your containers using 1 file with ".yml" extension;
+- You can configure everything easier;
+- [Official reference](https://docs.docker.com/compose/);
+
+- <b>Docker File vs. Docker Compose</b>:
+- Docker File: you specify the image and everything that the image must have (os system, libs, etc);
+- Docker Compose: manager containers in a unique file, configuration, links between containers, etc;
+
+- Main commands (enter the directory folder to run it):
+```
+docker-compose up: Run the file with container;
+docker-compose up -d: RUn the file with containers in dettach mode;
+docker-compose stop: Stops the containers;
+```
+
+## DOCKER FILE
+- When you want to create your own image;
+- When you want to update your image to Docker Hub;
