@@ -64,7 +64,7 @@
 - docker container run -d (or --detach): keeps the container on the foreground, even with no terminal opened;
 - docker container run --publish 8080:80 --detach --name webserver nginx: name your container;
 - docker container rm containerId containerId name: remove container;
-- docker container containerId start: start container;
+- docker start containerId: start container;
 - docker container top name containerId: list all process running inside the container;
 - docker container inspect containerId: brings JSON of the configuration of our docker;
 - docker container stats: estatísticas do docker;
@@ -79,6 +79,8 @@
 - docker image inspect [IMAGEID] : check image JSON config (json metadata);
 - docker container ls : see all containers and its id's;
 - docker container inspect [CONTAINERID] : check image CONTAINER config (json metadata);
+- docker volume ls:  Shows all volumes that docker creates;
+- docker volume rm [VOLUMEID] removes the volume selected;
 
 ## DOCKER RUN ACTION
 - Two signais: command to run (--);
@@ -173,3 +175,18 @@ docker run -d -p 8181:8181 sapk/cloud9 --auth username:password
 - <b>So, how do we store data using volumes?</b>
 - Simple! Use "$(pwd)" = (pwd is the current folder):
 ``docker run -d -v $(pwd):/workspace -p 8181:8181 sapk/cloud9 --auth username:password``
+- If I run the command of the volume to the same directory (cloud 9 workspace, they will share files and folders);
+- Do not think that different images will be sharing same thing, be careful;
+
+## DOCKER CONTAINER COMMIT
+- [Official Documentation](https://docs.docker.com/engine/reference/commandline/commit/);
+- Creates a new image from a container's changes;
+``docker container commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]``
+- Example: Generating a new image - (locally):
+``docker container commit -m "Added NVM and CURL" 6a1228458a3a``
+- Get the hascode that cameback for you after running command: "sha256:b4554e2ba0343081d9c6f5ca7ae8b238e474129d272b9e527177b0828952d766";
+- Run ``docker images`` and you'll see a image without a name or TAG;
+- Stop the container that generated the image;
+- Delete the container that generated the image;
+- Now run the command below with the new [IMAGEID] created:
+``docker run -d -v $(pwd):/workspace -p 8181:8181 [IMAGEID] --auth username:password``
